@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.card-header {
+    background-color: #FF99CC;
+    font-size: 20px;
+    height: 75px;
+}
+
+.lien {
+    display: flex;
+    justify-content: space-around;
+}
+
+.droitexploitation {
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+@media handholder, (max-device-width: 520px) {
+    .lien {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .droitexploitation {
+        text-align: center;
+    }
+
+    .card-header {
+        background-color: #FF99CC;
+        font-size: 22px;
+        height: 150px;
+    }
+}
