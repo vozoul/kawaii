@@ -1,4 +1,4 @@
-<div class="card-header">
+<div class="footer">
     <div class="lien">
         <a href=''>Mentions légales</a>
         <a href=''>Cookies et confidentialité</a>

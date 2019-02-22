@@ -1,5 +1,6 @@
 <header class="container-fluid">
     <nav class="navigation-mobile">
+        <div class="d-flex justify-content-center pt-4"> <a href=""><img  src="{{asset('images/logo-Verticale.png')}}" width="60px" alt=""></a> </div>
         <div id="menuToggle">
 
             <input type="checkbox"/>
@@ -8,9 +9,11 @@
             <span></span>
             <span></span>
 
+
             <div id="menu">
                 <div class="flex-column-center menu-mobile">
-                    <a href=""><img src="{{asset('images/logo-Horizontal.png')}}" width="100px" alt=""></a>
+                    <a class="pt-4" href=""><img src="{{asset('images/logo-Verticale.png')}}" width="60px" alt=""></a>
+
                     <ul class="nav navbar-right iconsize">
                         <li><i class="pe-7s-search"></i></li>
                         <li><i class="pe-7s-user"></i></li>
@@ -34,7 +37,7 @@
     </nav>
     <div class="wrapper">
 
-        <nav id="navigation" class="container-fluid">
+        <nav id="navigation" class="container-fluid fixNavigation">
             <div class="container-fluid">
                 <div class="navbar navbar-expand">
 

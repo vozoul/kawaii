@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/header.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/font.css')}}"/>
-    <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}"/>
+    <link rel="stylesheet" href="{{asset('css/footerdesign.css')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('images/Favicon.png')}}"/>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('css/footerdesign.css')}}">
+{{--<link rel="stylesheet" href="{{asset('fonts/font.css')}}"/>--}}
     @stack('style')
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    {{--<link rel="stylesheet" id="font-stroke-css" href="{{ asset('css/font-stroke.css')}}" >--}}
 
 </head>
 <body>
@@ -22,7 +24,10 @@
 <main class="container">
 @yield('content')
 </main>
-@include('footer')
+<footer>
+    @include('footer')
+    {{--<p class="text-center"> ceci est le footer</p></footer>--}}
+</footer>
 </body>
 </html>
 
