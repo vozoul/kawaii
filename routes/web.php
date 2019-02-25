@@ -15,7 +15,7 @@ Route::get('/', 'PagesController@viewHomePage');
 Route::get('/contact', 'PagesController@viewContactPage');
 Route::get('/listproducts', 'PagesController@viewListProductPage');
 Route::get('/product', 'PagesController@viewProduct');
-Route::get('/basket', 'PagesController@basket');
+Route::get('/basket', 'PagesController@viewListBasket');
 
 
 
