@@ -9,5 +9,9 @@ class PageController extends Controller
     public function showHomePage(){
         return view('home');
     }
+
+    public function showRegister(){
+        return view('register');
+    }
 }
 
