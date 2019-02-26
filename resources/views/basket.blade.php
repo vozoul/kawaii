@@ -1,8 +1,8 @@
     @extends('layout')
     @section('title', 'Panier')
     @push('style')
-        <link rel="stylesheet" href="{{asset('css/cherii.css')}}"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/cherii.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     @endpush
     @section('content')
         <div class="content">
