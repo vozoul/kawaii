@@ -1,5 +1,5 @@
 <header class="container-fluid">
-    <nav class="navigation-mobile">
+    <nav class="bg-cherii navigation-mobile fixed-top">
         <div class="float-right position-relative mt-5">
             <i class="pe-7s-shopbag"></i>
         </div>
@@ -45,7 +45,7 @@
 
         <nav id="navigation" class="container-fluid fixNavigation">
             <div class="container-fluid">
-                <div class="navbar navbar-expand">
+                <div class="bg-cherii navbar navbar-expand">
 
                 <a href=""><img src="{{asset('images/logo-Horizontal.png')}}" width="100px" alt=""></a>
 

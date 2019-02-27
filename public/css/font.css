@@ -44,7 +44,9 @@
 .pe-7s-share:before {
     content: "\e616";
 }
-
+.pe-7s-scissors:before {
+    content: "\e697";
+}
 
 
 
@@ -220,9 +222,7 @@
 .pe-7s-angle-down-circle:before {
     content: "\e689";
 }
-.pe-7s-scissors:before {
-    content: "\e697";
-}
+
 .pe-7s-wallet:before {
     content: "\e600";
 }

@@ -17,7 +17,7 @@
     {{--<link rel="stylesheet" id="font-stroke-css" href="{{ asset('css/font-stroke.css')}}" >--}}
 
 </head>
-<body>
+<body class="bg-cherii">
 @include('header')
 
 <main class="container">

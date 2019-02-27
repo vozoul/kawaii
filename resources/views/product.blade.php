@@ -10,9 +10,9 @@
          <img src="{{asset('images/panda-socks.jpg')}}" alt="panda-socks">
      </div>
         <!-- Add to cart form-->
-        <div class="bg-warning col-md-6 col-sm-12 ">
+        <div class="d-flex flex-column-center col-md-6 col-sm-12 ">
             {{--<div class="input-box input_box mb-4 mt-2 " style="z-index: 10">--}}
-                <select name="sizeselect" id="" class="selectpicker mb-4 w-100">
+                <select  name="sizeselect" id="" class="btn text-center mb-4 col-9">
 
                     <option value="">Select a Size...</option>
                     <option value="3452" price="0" data-label="x-small" data-qty="31">X-Small</option>
@@ -21,16 +21,30 @@
                     <option value="3455" price="0" data-label="large" data-qty="55">Large</option>
                     <option value="3456" price="0" data-label="x-large" data-qty="23">X-Large</option>
                 </select>
-                <span class="btn bg-addtobag w-100 text-white ">Add to Bag</span>
+                <span class="btn bg-addtobag col-9 mx-auto text-white ">Add to Bag</span>
                 <!-- wish list and share-->
-                <div class="row ">
-                    <p class="col-6 pe-7s-like">
+                <div class="mt-2 row col-9">
+                    <p class="text-center col-6 "><span class="pe-7s-like"></span>
                        Add to whishlist
                     </p>
-                    <p class="border-left col-6 pe-7s-share">
+                    <p class="text-center border-left col-6"><span class=" pe-7s-share"></span>
                         Share
                     </p>
                 </div>
+
+
+
+            <div class="col-9">
+                <h3>Description</h3>
+                <p class="h6">Sugar Thrillz Cloudy Skies Puffer Jacket cuz it’s cloudy with a chance of star showers bb. Stay floatin’ in this quilted puffer jacket that has a cloud print all ova, a hidden hood, two zip pockets N’ a front zip closure.</p>
+
+
+                <h3>Caractéristiques</h3>
+                <p class="h6">100% Polyester Lining : 100% Polyester; Insulation: 100% Polyester.</p>
+                <p class="h6">Hand Wash Cold, Hang Dry</p>
+                <p class="h6">Guide des tailles <span class="pe-7s-scissors"></span></p>
+
+            </div>
 
                 </div>
 
