@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/header.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/font.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/footerdesign.css')}}"/>
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}"/>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 {{--<link rel="stylesheet" href="{{asset('fonts/font.css')}}"/>--}}
@@ -23,8 +24,7 @@
 <main class="container">
 @yield('content')
 </main>
-<footer>
-    <p class="text-center"> ceci est le footer</p></footer>
+@include('footer')
 </body>
 </html>
 
