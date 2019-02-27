@@ -54,7 +54,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Vêtements</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Sous-vêtements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Vêtements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Accessoires</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Goodies</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Bundle</a></li>
                     </ul>
