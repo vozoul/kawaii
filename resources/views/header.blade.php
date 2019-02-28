@@ -27,8 +27,8 @@
                         <li><i class="pe-7s-shopbag"></i></li>
                     </ul>
                     <ul class="list-unstyled my-5 ali">
-                        <li class="border-bottom pb-2 mt-2"><a href="#">Home</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Vêtements</a></li>
+                        <li class="border-bottom pb-2 mt-2"><a href="/">Home</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/product">Vêtements</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Sous-vêtements</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Accessoires</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Goodies</a></li>
@@ -52,11 +52,11 @@
                 {{--<div class="navbar-expand">--}}
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Vêtements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sous-vêtements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Accessoires</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Goodies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Bundle</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Vêtements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Sous-vêtements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Accessoires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Goodies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Bundle</a></li>
                     </ul>
                 {{--</div>--}}
                 <ul class="nav  navbar-right iconsize">
