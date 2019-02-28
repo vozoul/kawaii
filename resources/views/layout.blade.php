@@ -23,6 +23,7 @@
 @include('header')
 
 <main class="container">
+
 @yield('content')
 </main>
 @include('footer')

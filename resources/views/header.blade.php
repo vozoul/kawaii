@@ -28,7 +28,7 @@
                     </ul>
                     <ul class="list-unstyled my-5 ali">
                         <li class="border-bottom pb-2 mt-2"><a href="#">Home</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Vêtements</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="{{'/product'}}">Vêtements</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Sous-vêtements</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Accessoires</a></li>
                         <li class="border-bottom pb-2 pt-2"><a href="#">Goodies</a></li>
