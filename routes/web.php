@@ -14,10 +14,10 @@
 Route::get('/', 'PagesController@viewHomePage');
 Route::get('/contact', 'PagesController@viewContactPage');
 Route::get('/listproducts', 'PagesController@viewListProductPage');
-Route::get('/product', 'PagesController@viewProduct');
+//Route::get('/product', 'PagesController@viewProduct');
 Route::get('/basket', 'PagesController@viewListBasket');
 Route::get('/register','PagesController@viewRegister');
-
+Route::get('/product', 'ProductController@viewProductPage');
 
 
 
