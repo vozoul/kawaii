@@ -7,7 +7,7 @@
     <h1>Fiche produit</h1>
     <div class="row col-sm-12" >
      <div class="col-md-6 col-sm-12">
-         <img src="{{asset('images/panda-socks.jpg')}}" alt="panda-socks">
+         <img src="{{asset('images/51TwWC0PLUX679.jpg')}}" alt="panda-socks">
      </div>
         <!-- Add to cart form-->
         <div class="d-flex flex-column-center col-md-6 col-sm-12 ">
