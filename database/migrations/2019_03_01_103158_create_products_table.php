@@ -50,7 +50,7 @@ class CreateProductsTable extends Migration
         DB::table('products')->insert([
             'name' => 'White dress lolita',
             'price' => '129',
-            'picture' => asset('images/white_dress'),
+            'picture' => asset('images/white_dress.jpg'),
             'description' => 'Robe blanche style\' lolita\' Size 38 M',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()

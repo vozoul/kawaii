@@ -25,6 +25,11 @@ class Product extends Model
     {
         return $this->belongsTo('App\ProductsCategory');
     }
+//    public function products_orders()
+//    {
+//        return $this->belongsToMany('App\ProductsOrder')
+//    }
+//
 
 
 }

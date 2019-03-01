@@ -18,7 +18,7 @@ class ProductController extends PagesController
     public function viewProductPage()
     {
         $products = Product::all();
-        return view('products.index',['products=>$products']);
+        return view('product',['products'=>$products]);
 
     }
     public function store()
@@ -27,9 +27,8 @@ class ProductController extends PagesController
 
         $product->name = request('name');
         $product->price = request('price');
+        $product->picture = request('picture');
         $product->description = request('description');
     }
-
-
 
 }
