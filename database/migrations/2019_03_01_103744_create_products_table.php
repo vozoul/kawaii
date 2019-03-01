@@ -16,7 +16,6 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
             $table->double('price')->unsigned();
@@ -26,7 +25,6 @@ class CreateProductsTable extends Migration
         });
 
         DB::table('products')->insert([
-            'category_id'=> 1,
             'name' => 'Dress butterfly',
             'price' => '59',
             'picture' => 'images/dress_butterfly.jpg',
@@ -35,7 +33,6 @@ class CreateProductsTable extends Migration
             'updated_at'  => Carbon::today()
         ]);
         DB::table('products')->insert([
-            'category_id'=> 1,
             'name' => 'Sweat unicorn',
             'price' => '23',
             'picture' => 'images/sweat_unicorn.jpg',
@@ -44,7 +41,6 @@ class CreateProductsTable extends Migration
             'updated_at'  => Carbon::today()
         ]);
         DB::table('products')->insert([
-            'category_id'=> 1,
             'name' => 'T-shirt sushi',
             'price' => '29',
             'picture' => 'images/t-shirt_sushi.jpg',
@@ -53,16 +49,14 @@ class CreateProductsTable extends Migration
             'updated_at'  => Carbon::today()
         ]);
         DB::table('products')->insert([
-            'category_id'=> 1,
             'name' => 'White dress lolita',
             'price' => '129',
-            'picture' => 'images/white_dress',
+            'picture' => 'images/white_dress.jpg',
             'description' => 'Robe blanche style\' lolita\' Size 38 M',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
         ]);
         DB::table('products')->insert([
-            'category_id'=> 1,
             'name' => 'Blue and white dress lolita',
             'price' => '49',
             'picture' => 'images/blue_and_white_dress.jpg',

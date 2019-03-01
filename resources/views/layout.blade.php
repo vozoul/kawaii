@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/header.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/font.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/footerdesign.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/cherii.css')}}"/>
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}"/>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">

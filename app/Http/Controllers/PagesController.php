@@ -35,7 +35,7 @@ class PagesController extends Controller
 
     public function viewProduct()
     {
-        return view('product');
+        return view('article');
     }
 
     public function viewRegister()

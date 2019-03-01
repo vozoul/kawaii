@@ -26,7 +26,7 @@ class ProductController extends PagesController
         } else {
             $products = Product::all();
         }
-        return view('products.index', ['products' => $products]);
+        return view('products', ['products' => $products]);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductController extends PagesController
     public function create()
     {
         $categories = Category::all();
-        return view('products.create', ['categories' => $categories, 'colors' => $colors]);
+        return view('products.create', ['categories' => $categories]);
     }
 
     /**
