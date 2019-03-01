@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/cherii.css')}}"/>
 @endpush
 @section('content')
-    <h1>Fiche produit</h1>
+    <h1>{{}}</h1>
     <div class="row col-sm-12" >
      <div class="col-md-6 col-sm-12">
          <img src="{{asset('images/51TwWC0PLUX679.jpg')}}" alt="panda-socks">

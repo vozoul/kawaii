@@ -5,11 +5,10 @@
 
 @section('content')
 
-{{dd($arrayProduct)}}
 <div class="container">
     <div class="row justify-content-center border-left border-right">
         @foreach($listproducts as $product)
-    <div class="  card  align my-3 mx-2" style="width: 18rem ;background-color: #FFD899 ">
+    <div class="card  align my-3 mx-2" style="width: 18rem ;background-color: #FFD899 ">
         <div class="  pe-7s-like  ">+</div>
         <div class="  pe-7s-shopbag ">+</div>
 

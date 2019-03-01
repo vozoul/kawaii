@@ -18,6 +18,9 @@ Route::get('/product', 'PagesController@viewProduct');
 Route::get('/basket', 'PagesController@viewListBasket');
 Route::get('/users', 'UsersController@index');
 
+Route::get('/customer', 'CustomerController@index');
+Route::get('/customer/{id}', 'CustomerController@index');
+
 //Route::controllers([
 //    'auth' => 'Auth\AuthController',
 //    'password' => 'Auth\PasswordController',
