@@ -16,4 +16,13 @@ Route::get('/contact', 'PagesController@viewContactPage');
 Route::get('/listproducts', 'PagesController@viewListProductPage');
 Route::get('/product', 'PagesController@viewProduct');
 Route::get('/basket', 'PagesController@viewListBasket');
-Route::get('/vetements', 'categoriesController@viewCategoryname');
+
+Route::get('/register','PagesController@viewRegister');
+Route::get('/product', 'ProductController@viewProductPage');
+
+// Categories
+
+Route::get('/categories/{id}', 'CategoriesController@index');
+Route::get('/categories', 'CategoriesController@index');
+Route::post('/categories', 'CategoriesController@store');
+Route::get('/categories/create', 'CategoriesController@create');

@@ -5,9 +5,9 @@
 
 @section('content')
 
-    @foreach ($catNames as $catName)
+    @foreach ($categories as $catName)
         {{--<li> {{ $catName->id }} </li>--}}
-        <h2> {{ $catName->category }} </h2>
+        <h2> {{ $catName->name }} </h2>
         @endforeach
 
 

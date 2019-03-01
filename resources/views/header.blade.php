@@ -27,12 +27,12 @@
                         <li><i class="pe-7s-shopbag"></i></li>
                     </ul>
                     <ul class="list-unstyled my-5 ali">
-                        <li class="border-bottom pb-2 mt-2"><a href="#">Home</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="{{'/product'}}">Vêtements</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Sous-vêtements</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Accessoires</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Goodies</a></li>
-                        <li class="border-bottom pb-2 pt-2"><a href="#">Bundle</a></li>
+                        <li class="border-bottom pb-2 mt-2"><a href="/">Home</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/categories/1">Vêtements</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/categories/2">Sous-vêtements</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/categories/3">Accessoires</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/categories/4">Goodies</a></li>
+                        <li class="border-bottom pb-2 pt-2"><a href="/categories/5">Bundle</a></li>
 
                     </ul>
                     <i class="fa fa-facebook"></i>
@@ -51,12 +51,12 @@
 
                 {{--<div class="navbar-expand">--}}
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Vêtements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sous-vêtements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Accessoires</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Goodies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Bundle</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/categories/1">Vêtements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/categories/2">Sous-vêtements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/categories/3">Accessoires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/categories/4">Goodies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/categories/5">Bundle</a></li>
                     </ul>
                 {{--</div>--}}
                 <ul class="nav  navbar-right iconsize">
