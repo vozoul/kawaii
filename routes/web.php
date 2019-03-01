@@ -26,3 +26,9 @@ Route::get('/categories/{id}', 'CategoriesController@index');
 Route::get('/categories', 'CategoriesController@index');
 Route::post('/categories', 'CategoriesController@store');
 Route::get('/categories/create', 'CategoriesController@create');
+
+// Products
+Route::get('/products/{id}', 'ProductController@index');
+Route::get('/products', 'ProductController@index');
+Route::post('/products', 'ProductController@store');
+Route::get('/products/create', 'ProductController@create');

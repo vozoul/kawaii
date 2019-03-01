@@ -14,12 +14,15 @@ class CreateProductsCategoriesTable extends Migration
     public function up()
     {
         Schema::create('products_categories', function (Blueprint $table) {
+            $table->engine ='InnoDB';
             $table->increments('id');
             $table->unsignedInteger('category_id');
+            $table->unsignedInteger('product_id');
             $table->timestamps();
         });
         Schema::table('products', function (Blueprint $table) {
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
