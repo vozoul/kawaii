@@ -40,7 +40,7 @@
                 <label for="picture02">Image 02 : </label>
             </div>
             <div class="col-md-2">
-                <input type="file" name="picture02" id="picture01" placeholder="image 02">
+                <input type="file" name="picture02" id="picture02" placeholder="image 02">
             </div>
         </div>
         <div class="row" style="margin-bottom:10px">
