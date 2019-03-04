@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'PagesController@viewHomePage');
 Route::get('/contact', 'PagesController@viewContactPage');
 Route::get('/listproducts', 'PagesController@viewListProductPage');
@@ -21,14 +23,16 @@ Route::get('/register','PagesController@viewRegister');
 Route::get('/article', 'ProductController@viewProductPage');
 
 // Categories
-
+Route::get('/categories/create', 'CategoriesController@create');
 Route::get('/categories/{id}', 'CategoriesController@index');
 Route::get('/categories', 'CategoriesController@index');
 Route::post('/categories', 'CategoriesController@store');
-Route::get('/categories/create', 'CategoriesController@create');
+
 
 // Products
-Route::get('/products/{id}', 'ProductController@index');
-Route::get('/products', 'ProductController@index');
-Route::post('/products', 'ProductController@store');
-Route::get('/products/create', 'ProductController@create');
+Route::get('/products/create', 'ProductsController@create');
+Route::get('/products/{id}', 'ProductsController@index');
+Route::get('/products', 'ProductsController@index');
+Route::post('/products', 'ProductsController@store');
+
+
