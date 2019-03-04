@@ -18,6 +18,8 @@ Route::get('/listproducts', 'PagesController@viewListProductPage');
 Route::get('/basket', 'PagesController@viewListBasket');
 Route::get('/register','PagesController@viewRegister');
 Route::get('/product', 'ProductController@viewProductPage');
+Route::post('/forms', 'ProductController@store');
+
 
 
 

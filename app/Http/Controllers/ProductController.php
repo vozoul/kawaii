@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+
 class ProductController extends PagesController
 {
 
@@ -18,17 +19,32 @@ class ProductController extends PagesController
     public function viewProductPage()
     {
         $products = Product::all();
-        return view('product',['products'=>$products]);
+        return view('product', ['products' => $products]);
 
     }
+
+    public function create()
+    {
+        return view('forms');
+    }
+
     public function store()
     {
-        $product = new Product();
+        $products = new Product();
 
-        $product->name = request('name');
-        $product->price = request('price');
-        $product->picture = request('picture');
-        $product->description = request('description');
+        $products->name = request('name');
+        $products->price = request('price');
+        $image = request()->file('picture');
+        $fullName = $image->getClientOriginalName();
+        $image->move('images', $fullName);
+        //save image
+        $products->picture = 'images/' . $fullName;
+        $products->description = request('description');
+        $products->save();
+        $products = Product::all();
+
+
+        return view('product', ['products' => $products]);
     }
 
 }

@@ -28,8 +28,59 @@
             @endforeach
         </div>
     </div>
+    /////////////// Ajout de produit au catalogue
 
+    <form method="POST" action="/forms" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" name="name" id="name" placeholder="name of the new product">
+            <label for="price">Price : </label>
+            <input type="text" name="price" id="price" placeholder="price of the new product">
 
+        </div>
+        <div>
+            <input type="file" name="picture" id="picture" placeholder=" choose a product picture">
+        </div>
+        <div>
+            <label for="description">Description : </label>
+            <textarea type="text" name="description" id="description" placeholder="Form description"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Create product</button>
+        </div>
+    </form>
+
+    /////////////////*mettre à jour un produit du catalogue
+
+    <form method="POST" action="/forms" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div>
+            <label for="name">product to update : </label>
+            <select>@foreach($products as $name){
+                <option value="{{$products}}"  >{{$product->name}}</option>}
+                @endforeach
+            </select>
+            <input type="" name="name" id="name" placeholder="name of the new product">
+            <label for="name">Name : </label>
+            <input type="text" name="name" id="name" placeholder="name of the new product">
+            <label for="price">Price : </label>
+            <input type="text" name="price" id="price" placeholder="price of the new product">
+
+        </div>
+        <div>
+            <input type="file" name="picture" id="picture" placeholder=" choose a product picture">
+        </div>
+        <div>
+            <label for="description">Description : </label>
+            <textarea type="text" name="description" id="description" placeholder="Form description"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Update a product</button>
+        </div>
+    </form>
 
 
 

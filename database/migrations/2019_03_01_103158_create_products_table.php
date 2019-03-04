@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->double('price')->unsigned();
-            $table->string('picture')->nullable();
+            $table->string(asset("images/'picture'"))->nullable();
             $table->text('description');
             $table->timestamps();
         });
@@ -64,6 +64,15 @@ class CreateProductsTable extends Migration
             'updated_at'  => Carbon::today()
         ]);
     }
+
+//    DB:table ('products')->create([
+//        'name'=>'',
+//        'price'=>'',
+//'picture' => asset(''),
+//'description' => '',
+//'created_at'  => Carbon::today(),
+//'updated_at'  => Carbon::today()
+//])
 
     /**
      * Reverse the migrations.
