@@ -17,4 +17,14 @@ Route::get('/listproducts', 'PagesController@viewListProductPage');
 Route::get('/product', 'PagesController@viewProduct');
 Route::get('/basket', 'PagesController@viewListBasket');
 
-Route::get('/adresse', 'AdressesController@index');
+Route::get('/adresse/postCode', 'AdressesController@orderByPostCode');
+Route::get('/adresse/city', 'AdressesController@sortByCity');
+Route::get('/adresse/addadress','AdressesController@addAdress');
+Route::post('/adresse/addadress','AdressesController@store');
+
+Route::get('/adresse/adressmodify/{id}','AdressesController@selectOneToModif');
+Route::post('/adresse/adressmodify','AdressesController@modify');
+
+Route::get('/adresse/{id}','AdressesController@delete');
+
+Route::get('/adresses','AdressesController@index');
