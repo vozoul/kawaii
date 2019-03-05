@@ -54,7 +54,7 @@ class CreateProductsTable extends Migration
             'image01' => 'images/t-shirt_manches_courtes_capuche_motif_chat_mignon_Kitty _blanc_1024x1024.jpg',
             'image02' => 'images/t-shirt_manches_courtes_capuche_motif_chat_mignon_Kitty _back_blanc_1024x1024.jpg',
             'image03' => 'images/t-shirt_manches_courtes_capuche_motif_chat_mignon_Kitty _gris_1024x1024.jpg',
-            'description' => 'Si vous êtes un fan de chatons, ce t-shirt à capuche ne devrait pas manquer à vos collections. La capuche est accentuée par des oreilles de chat, ce qui la rend particulièrement kawaii. Idéale à porter lors de journées décontractées. Portez-le lors d’une promenade ensoleillée dans le parc et profitez du sentiment confortable de cette pièce simple et kawaii.',
+            'description' => 't-shirt à capuche avec des oreilles de chat, ce qui la rend particulièrement kawaii.',
             'feature' => '100 % Cotton',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()

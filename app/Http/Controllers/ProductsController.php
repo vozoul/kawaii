@@ -8,60 +8,131 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function index() {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
         $id = request()->route('id');
         if ($id) {
             $products = Product::where('id', $id)->get();
         } else {
             $products = Product::all();
         }
-        return view('products',  ['products' => $products]);    }
+        return view('products', ['products' => $products]);
+    }
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function store() {
+    public function store()
+    {
         $product = new Product();
         $product->name = request('name');
         $product->price = request('price');
+        for ($i = 1; $i < 4; $i++) {
+            $file = request()->file('picture0' . $i);
+            if ($file != null) {
+                $ext = $file->getClientOriginalExtension();
+                $newName = strtolower(str_replace(" ", "_", $product->name) . "_0" . $i . "." . $ext);
+                $file->move('images\\', $newName);
 
-        $directoryName = strtolower(str_replace(" ", "_", $product->name));
-        //$picture = request()->file('picture01');
-
-        $product->image01 = self::storePicture($directoryName, request()->file('picture01'));
-        $product->image02 = self::storePicture($directoryName, request()->file('picture02'));
-        $product->image03 = self::storePicture($directoryName, request()->file('picture03'));
-
+                switch ($i) {
+                    case 1:
+                        $product->image01 = 'images/' . $newName;
+                        break;
+                    case 2:
+                        $product->image02 = 'images/' . $newName;
+                        break;
+                    case 3:
+                        $product->image03 = 'images/' . $newName;
+                        break;
+                }
+            }
+        }
         $product->description = request('description');
         $product->feature = request('feature');
         $product->save();
         $products = Product::all();
-        return view('products',  ['products' => $products]);
+        return view('products', ['products' => $products]);
     }
-
-    /**
-     * @param $directory
-     * @param $picture
-     */
-    private function storePicture($directory, $picture)
+    public function ProductsList()
     {
-        $fullName = $picture->getClientOriginalName();
-        $picture->move('images\\'.$directory, $fullName);
-
-        return 'images/'.$directory."/".$fullName;
+        $products = Product::all();
+        return view('productsList', ['products' => $products]);
     }
-
-
-
-
     /**
      * Create form
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function create() {
+    public function create()
+    {
         $categories = Category::all();
         return view('create', ['categories' => $categories]);
     }
 
+    public function edit($id)
+{
+    $products = Product::find($id);
+    $categories = Category::all();
+    //dd($products);
+    return view('edit', ['products' => $products], ['categories' => $categories]);
+
+}
+    public function update($id)
+    {
+        $product = Product::find($id);
+
+        $product->name = request('name');
+        $product->price = request('price');
+
+        for ($i = 1; $i < 4; $i++) {
+            $file = request()->file('picture0' . $i);
+            if ($file != null) {
+                $ext = $file->getClientOriginalExtension();
+                $newName = strtolower(str_replace(" ", "_", $product->name) . "_0" . $i . "." . $ext);
+                $file->move('images\\', $newName);
+
+                switch ($i) {
+                    case 1:
+                        $product->image01 = 'images/' . $newName;
+                        break;
+                    case 2:
+                        $product->image02 = 'images/' . $newName;
+                        break;
+                    case 3:
+                        $product->image03 = 'images/' . $newName;
+                        break;
+                }
+            }
+        }
+        $product->description = request('description');
+        $product->feature = request('feature');
+        $product->save();
+
+        $products = Product::all();
+
+        return view('products', ['products' => $products]);
+    }
+
+  public function delete() {
+        // used to choose elements display on view or not
+        $all = true;
+        // find a category object  referenced vy id parameter
+        $products = Product::find(request()->route('id'));
+        // delete Category object
+        $products->delete();
+        // Fetch all categories (array of Category object)
+        $products = Product::all();
+
+    // current used to choose current element of menu
+    return view('products',  ['current' => 'products', 'products' => $products, 'all' => $all]);
+    }
+    public function DeleteYesOrNo ()
+    {
+        return view('delete', [
+            'products' => Product::find(request()->route('id')),
+        ]);
+    }
 }
