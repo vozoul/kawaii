@@ -47,4 +47,7 @@ class ProductController extends PagesController
         return view('product', ['products' => $products]);
     }
 
+
+
+
 }
