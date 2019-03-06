@@ -35,5 +35,8 @@ class PagesController extends Controller
     {
         return view('register');
     }
-
+    public function viewCategories()
+    {
+        return view('categories');
+    }
 }
