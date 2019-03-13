@@ -2,7 +2,7 @@
 @section('content')
     <h1>Delete a product</h1>
 
-    <form method="POST" action="/products/{{ $products->id }}/delete">
+    <form method="POST" action="{{action('ProductsController@delete',$products->id)}}">
 
         {{ csrf_field() }}
 

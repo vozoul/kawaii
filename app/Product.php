@@ -3,8 +3,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property string name
+ * @property int price
+ * @property text description
+
+ */
 class Product extends Model
 {
+    /**
+     * @var array
+     */
     protected $fillable = [
         'name',
         'price',
@@ -14,6 +23,7 @@ class Product extends Model
         'description',
         'feature'
     ];
+
     public $timestamps = true;
 
     public function categories()

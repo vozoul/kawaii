@@ -23,15 +23,22 @@ class ProductsController extends Controller
     }
 
     /**
+     * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function store()
+    public function store(Request $request)
     {
+        /**
+         * @var Product
+         */
         $product = new Product();
-        $product->name = request('name');
-        $product->price = request('price');
+
+        $product->name = $request->get('name');
+        $product->price = $request->get('price');
+
         for ($i = 1; $i < 4; $i++) {
-            $file = request()->file('picture0' . $i);
+            //$file = request()->file('picture0' . $i); Méthode procedurale
+            $file = $request->file('picture0' . $i);
             if ($file != null) {
                 $ext = $file->getClientOriginalExtension();
                 $newName = strtolower(str_replace(" ", "_", $product->name) . "_0" . $i . "." . $ext);
@@ -50,7 +57,7 @@ class ProductsController extends Controller
                 }
             }
         }
-        $product->description = request('description');
+        $product->description = $request->get('description');
         $product->feature = request('feature');
         $product->save();
         $products = Product::all();
@@ -99,7 +106,7 @@ class ProductsController extends Controller
                         $product->image01 = 'images/' . $newName;
                         break;
                     case 2:
-                        $product->image02 = 'images/' . $newName;
+                        $product->image02 = '/images/' . $newName;
                         break;
                     case 3:
                         $product->image03 = 'images/' . $newName;
@@ -127,7 +134,7 @@ class ProductsController extends Controller
         $products = Product::all();
 
     // current used to choose current element of menu
-    return view('products',  ['current' => 'products', 'products' => $products, 'all' => $all]);
+    return redirect('/productsList');
     }
     public function DeleteYesOrNo ()
     {

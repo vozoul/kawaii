@@ -5,50 +5,51 @@
 
 @section('content')
 
-    <a class="btn btn-dark mb-3" href="{{action('ProductsController@create')}}">Créer un nouveau produit</a>
-    <table class="table table-striped table-bordered table-sm col-md-8 center-div mb-5" cellspacing="0" width="100%">
-        <thead>
-        <tr>
-            <th class="th-sm">NAME</th>
-            <th class="th-sm">DESCRIPTION</th>
-            <th class="th-sm">PRICE</th>
-            <th class="th-sm">CARACTERISTIQUE</th>
-            <th class="th-sm">iMAGE01</th>
-            <th class="th-sm">IMAGE02</th>
-            <th class="th-sm">IMAGE03</th>
+    <div class="content">
 
-        </tr>
-        </thead>
-
+        <p class='text-left my-2'>
+            <a href='{{route('create.product')}}' class='btn btn-dark'>
+                <i class='fas fa-book-open'></i> Créer un nouveau produit
+            </a></p>
         @foreach($products as $product)
-            <tbody >
-        <tr>
-            <td>{{ $product->name }}</td>
-            <td>{{ $product->description }}</td>
-            <td>{{ $product->price }}</td>
-            <td>{{ $product->feature }}</td>
-            <td><img src="{{ $product->image01 }}" width="100px" alt="{{ $product->name }}"></td>
-            <td><img src="{{ $product->image02 }}" width="100px" alt="{{ $product->name }}"></td>
-            <td><img src="{{ $product->image03 }}" width="100px" alt="{{ $product->name }}"></td>
-            <td class="row text-center"><a class="btn btn-info" href="{{action('ProductsController@edit', $product->id)}}">
+        <form method='post' action='/products/edit/{{$product->id}}'>
+            @csrf
+            <div class="card my-2">
+                <div class="row py-2">
+                    <div class="card-text pl-4 pr-2">
+                        <img src="{{$product->image01}}" alt="" width="60" height="60">
+                    </div>
+                    <div class="card-text pl-4 pr-2">
+                        <img src="{{$product->image02}}" alt="" width="60" height="60">
+                    </div>
+                    <div class="card-text col-6">
+                        <div class="card-title">
+                            <h4>{{ $product->name }}</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                    <div class="card-text ml-auto mr-0 my-auto">
+                        <div class="card-title">
+                            <div>
 
-                    <i class="fas fa-edit"></i>
-                    editergit
-                </a>
+                                <h4>{{ $product->price }} €</h4>
+                            </div>
 
-                <a class="btn btn-danger" href="{{action('ProductsController@delete', $product->id)}}">
+                        </div>
+                    </div>
+                    <div class="card-text mr-4 ml-auto my-auto">
+                        <p>
+                            <button type='submit' class='btn btn-success rounded-circle' name='' value='Modifier' >M<i class='fas fa-times'></i></button>
+                            <a href="{{action('ProductsController@DeleteYesOrNo',$product->id)}}" class='btn btn-danger rounded-circle'> X </a>  <i class='fas fa-times'></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                    delete
-
-                </a>
-
-            </td>
-
-
-        </tr>
-
-        </tbody>
-            @endforeach
-    </table>
+        </form>
+    </div>
+    @endforeach
 
 @endsection

@@ -55,6 +55,17 @@ class CategoriesController extends Controller
         return view('categories.index', ['categories' => $categories = Category::all()]);
     }
 
+    public function update()
+    {
+        $category = equest()->route('id');
+        $category->name = request('name');
+        $category->description = request('description');
+        $category->save();
 
+        return redirect(route('categories.index', ['category' => $category]));
+    }
+    public function delete()
+    {
 
+    }
 }

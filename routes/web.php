@@ -28,23 +28,26 @@ Route::get('/categories/create', 'CategoriesController@create');
 Route::get('/categories/{id}', 'CategoriesController@index');
 Route::get('/categories', 'CategoriesController@index');
 Route::post('/categories', 'CategoriesController@store');
+Route::get('/categories/update/{id}', 'CategoriesController@update');
+Route::get('/categories/delete/{id}', 'CategoriesController@delete');
 
 
 
 // Products
 Route::get('/productsList', 'ProductsController@productsList');
-Route::get('/products/create', 'ProductsController@create');
+Route::get('/products/create', 'ProductsController@create')->name("create.product");
 Route::get('/products/{id}', 'ProductsController@index');
 Route::get('/products', 'ProductsController@index');
 Route::post('/products', 'ProductsController@store');
-Route::get('/products/{id}/edit', 'ProductsController@edit');
+Route::get('/products/edit/{id}', 'ProductsController@edit');
+Route::post('/products/edit/{id}', 'ProductsController@edit');
 
 
 // Update a product referenced by id parameter
-Route::post('/products/{id}/update', 'ProductsController@update');
+Route::post('/products/update/{id}', 'ProductsController@update');
 
 // Delete confirmation
-Route::get('/products/{id}/delete', 'ProductsController@DeleteYesOrNo');
+Route::get('/products/edit/{id}', 'ProductsController@DeleteYesOrNo');
 //Route::get('/products/{id}/delete', function () {
 //    return view('delete', [
 //        'products' => Product::find(request()->route('id')),
@@ -52,8 +55,8 @@ Route::get('/products/{id}/delete', 'ProductsController@DeleteYesOrNo');
 //});
 
 
- //Delete a category referenced by id parameter
-Route::post('/products/{id}/delete', 'ProductsController@delete');
+ //Delete a product referenced by id parameter
+Route::post('/products/delete/{id}', 'ProductsController@delete');
 
 
 
