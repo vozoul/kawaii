@@ -60,3 +60,11 @@ Route::post('/products/delete/{id}', 'ProductsController@delete');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

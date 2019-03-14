@@ -22,16 +22,13 @@ class CreateProductsCategoriesTable extends Migration
             $table->unsignedInteger('product_id');
             $table->timestamps();
         });
-        Schema::table('products_categories', function(Blueprint $table) {
-            $table->foreign('product_id')->references('id')->on('products')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+/**        Schema::table('products_categories', function(Blueprint $table) {
+            $table->foreign('product_id')->references('id')->on('products');
         });
         Schema::table('products_categories', function(Blueprint $table) {
-            $table->foreign('category_id')->references('id')->on('categories')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
+ **/
 
         DB::table('products_categories')->insert([
             'category_id' => 1,
