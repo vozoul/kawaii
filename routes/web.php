@@ -16,3 +16,11 @@ Route::get('/contact', 'PagesController@viewContactPage');
 Route::get('/listproducts', 'PagesController@viewListProductPage');
 Route::get('/product', 'PagesController@viewProduct');
 Route::get('/basket', 'PagesController@viewListBasket');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+
+        factory(App\User::class, 10)->make()->each(function (\App\User $user){
+            $user->shipping_address = factory(App\Address::class)->create()->id;
+            $user->invoice_address = factory(App\Address::class)->create()->id;
+            $user->save();
+        });
     }
 }

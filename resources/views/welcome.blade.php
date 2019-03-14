@@ -85,10 +85,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="/home">Home</a>
-                    <a href="/listeprod">Liste produits</a>
-                    <a href="/ficheprod">Fiche produit</a>
-                    <a href="/panier">Panier</a>
+                    {{--<a href="/home">Home</a>--}}
+                    {{--<a href="/listeprod">Liste produits</a>--}}
+                    {{--<a href="/ficheprod">Fiche produit</a>--}}
+                    {{--<a href="/panier">Panier</a>--}}
+                    <a href="/cherii">My Cherii</a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Address extends Authenticatable
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'firstName', 'email', 'password', 'phone', 'birth', 'shipping_address', 'invoice_address',
+        'street', 'zip', 'city', 'country', 'complement',
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
+
     ];
 
     /**
@@ -34,21 +34,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-//        'email_verified_at' => 'datetime',
+
     ];
 
-
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function shippingAddress(){
-        return $this->hasMany(Address::class, 'id',"shipping_address");
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function invoiceAddress(){
-        return $this->hasMany(Address::class,'id', "invoice_address");
+    public function Users(){
+        return $this->belongsTo(User::class);
     }
 }
