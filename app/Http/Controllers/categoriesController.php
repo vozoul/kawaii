@@ -20,6 +20,7 @@ class CategoriesController extends Controller
 //        return view('category', ['catNames' => $catName]);
 //    }
     public function index()
+
     {
         $id = request()->route('id');
 

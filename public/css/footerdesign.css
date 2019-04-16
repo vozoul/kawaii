@@ -2,9 +2,10 @@
 
 
 .footer {
-    background-color: #FF99CC;
+    background: bottom left / contain url("../images/footer.jpg") no-repeat;
     font-size: 1rem;
-    /*height: 75px;*/
+    height: 250px;
+    background-color: #fbd0d7;
 }
 
 .lien {
@@ -37,8 +38,9 @@ a {
     }
 
     .footer {
-        background-color: #FF99CC;
+        background: bottom left / contain url("../images/footer.jpg") no-repeat;
         font-size: 1.1rem;
-        /*height: 150px;*/
+        background-color: #fbd0d7;
+        height: 150px;
     }
 }

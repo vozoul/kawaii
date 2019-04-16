@@ -1,5 +1,5 @@
 <header class="container-fluid">
-    <nav class="bg-cherii navigation-mobile fixed-top">
+    <nav class="pb-3 shadow bg-cherii navigation-mobile fixed-top">
         <div class="float-right position-relative mt-5">
             <i class="pe-7s-shopbag"></i>
         </div>
@@ -43,7 +43,7 @@
     </nav>
     <div class="wrapper">
 
-        <nav id="navigation" class="container-fluid fixNavigation">
+        <nav id="navigation" class="shadow bg-cherii container-fluid fixNavigation">
             <div class="container-fluid">
                 <div class="bg-cherii navbar navbar-expand">
 

@@ -23,7 +23,7 @@
 <body class="bg-cherii">
 @include('header')
 
-<main class="container">
+<main class="container pt-5">
 
 @yield('content')
 </main>
